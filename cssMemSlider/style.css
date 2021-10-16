@@ -13,6 +13,7 @@
     clear: both;
     position: relative;
     transition: left 0.6s;
+    border-radius: 10%;
 }
 
 .image-holder2 {
@@ -40,7 +41,9 @@
     transition: right 0.6s;
 }
 
-.slider-image {}
+.slider-image {
+    border-radius: 1%;
+}
 
 /* turn 1st slide */
 
@@ -93,7 +96,6 @@
 }
 
 /* turn 4th slider  */
-
 #slider-image-4:target~.image-holder4 {
     right: 0;
     margin: 0;
@@ -102,6 +104,7 @@
     left: -1920px;
     transition: left 0.6s;
 }
+
 .button-holder {
     height: 5%;
     display: flex;
@@ -120,4 +123,21 @@
 }
 .slider-buttons:hover{
     cursor: pointer;
+    background-color: white;
+    border: rgb(93, 93, 232);
+    border-radius: 50%;
+}
+.slider-buttons:active{
+    background-color: grey;
+
+}
+.slider-buttons:checked{
+    background-color: grey;
+
+}
+a:checked{
+background-color: grey;
+}
+a:active{
+    background-color: grey;
 }
