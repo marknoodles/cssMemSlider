@@ -1,62 +1,123 @@
-.slider-holder
-{
+.slider-holder {
     display: flex;
     justify-content: center;
     background-color: grey;
     padding-bottom: 4%;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
-.image-holder
-{
-    padding-top: 6%;
+.image-holder {
+    padding-top: 4%;
     clear: both;
     position: relative;
     transition: left 0.6s;
 }
 
-.slider-image
-{
+.image-holder2 {
+    right: -1920px;
+    position: relative;
+    transition: right 0.6s;
+    margin-top: -42%;
+    padding-top: 4%;
+    margin-bottom: -4%;
 }
 
-#slider-image-1:target ~ .image-holder
-{
+.image-holder3 {
+    margin-top: -42%;
+    padding-bottom: 2%;
+    padding-top: 8%;
+    position: relative;
+    right: -1920px;
+    transition: right 0.6s;
+}
+
+.image-holder4 {
+    margin-top: -42%;
+    position: relative;
+    right: -1920px;
+    transition: right 0.6s;
+}
+
+.slider-image {}
+
+/* turn 1st slide */
+
+#slider-image-1:target~.image-holder {
     left: 0px;
 }
-#slider-image-2:target ~ .image-holder
-{
-    left: 0px;
-    display: none;
-}
-.image-holder2{
-    display: none;
-}
-#slider-image-2:target ~ .image-holder2
-{
-    left: -1920px;
-    display:inline;
-}
 
-#slider-image-3:target ~ .image-holder
-{
+/* 1st slide going left 2nd slide going mid */
+
+#slider-image-2:target~.image-holder {
     left: -1920px;
 }
 
-.button-holder
-{
+/* turn 2nd slide */
+
+#slider-image-2:target~.image-holder2 {
+    right: 0px;
+}
+
+/* go away 3rd slide */
+
+#slider-image-3:target~.image-holder2 {
+    left: -1920px;
+    margin-top: -42%;
+}
+
+/* bug 1st slide fix */
+
+#slider-image-3:target~.image-holder {
+    display: none;
+}
+
+#slider-image-4:target~.image-holder {
+    display: none;
+}
+
+/* turn 3rd slide */
+
+#slider-image-3:target~.image-holder3 {
+    margin-top: 0;
+    right: 0;
+}
+
+/* 2nd slider going left */
+
+#slider-image-3:target~.image-holder2 {
+    right: 0;
+    left: -1920px;
+    transition: left 0.6s;
+}
+
+/* turn 4th slider  */
+
+#slider-image-4:target~.image-holder4 {
+    right: 0;
+    margin: 0;
+}
+#slider-image-4:target~.image-holder3 {
+    left: -1920px;
+    transition: left 0.6s;
+}
+.button-holder {
     height: 5%;
     display: flex;
     justify-content: space-between;
-    width: 3%;
-    margin-left: 61%;
+    width: 5%;
+    margin-left: 78%;
+    margin-top: -3%;
 }
 
-.slider-buttons
-{
+.slider-buttons {
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 11px;
+    width: 11px;
     border-radius: 5px;
     background-color: rgb(93, 93, 232);
+}
+.slider-buttons:hover{
+    cursor: pointer;
 }
