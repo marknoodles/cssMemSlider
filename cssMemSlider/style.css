@@ -6,105 +6,150 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    height: 90vh;
 }
 
 .image-holder {
-    padding-top: 4%;
+    top: 119vh;
     clear: both;
     position: relative;
-    transition: left 0.6s;
+    /* transition: left 0.6s; */
     border-radius: 10%;
 }
 
 .image-holder2 {
+    top: 39vh;
     right: -1920px;
     position: relative;
-    transition: right 0.6s;
-    margin-top: -42%;
-    padding-top: 4%;
     margin-bottom: -4%;
 }
 
 .image-holder3 {
-    margin-top: -42%;
     padding-bottom: 2%;
-    padding-top: 8%;
+    top: -30vh;
     position: relative;
     right: -1920px;
-    transition: right 0.6s;
+    /* transition: right 0.6s; */
 }
 
 .image-holder4 {
-    margin-top: -42%;
+    top: -113vh;
     position: relative;
     right: -1920px;
-    transition: right 0.6s;
+    /* transition: right 0.6s; */
 }
 
 .slider-image {
     border-radius: 1%;
 }
 
+/*button 1*/
+
 /* turn 1st slide */
 
 #slider-image-1:target~.image-holder {
-    left: 0px;
+    right: 0px;
+    transition: right 0.6s;
 }
 
-/* 1st slide going left 2nd slide going mid */
+#slider-image-1:target~.image-holder2 {
+    transition: right 0.6s;
+    right: -1920px;
+}
+
+#slider-image-1:target~.image-holder3 {
+    right: calc(-1920px * 2);
+    transition: right 0.6s;
+}
+
+#slider-image-1:target~.image-holder4 {
+    right: calc(-1920px * 3);
+    transition: right 0.6s;
+}
+/*----------------------------------------------------*/
+/*button 2*/
 
 #slider-image-2:target~.image-holder {
-    left: -1920px;
+    right: 1920px;
+    transition: right 0.6s;
 }
 
 /* turn 2nd slide */
 
 #slider-image-2:target~.image-holder2 {
     right: 0px;
+    transition: right 0.6s;
 }
 
-/* go away 3rd slide */
-
-#slider-image-3:target~.image-holder2 {
-    left: -1920px;
-    margin-top: -42%;
+#slider-image-2:target~.image-holder3 {
+    right: calc(-1920px);
+    transition: right 0.6s;
 }
 
-/* bug 1st slide fix */
-
-#slider-image-3:target~.image-holder {
-    display: none;
+#slider-image-2:target~.image-holder4 {
+    right: calc(-1920px * 2);
+    transition: right 0.6s;
 }
-
-#slider-image-4:target~.image-holder {
-    display: none;
-}
+/*----------------------------------------------------*/
+/*button 3*/
 
 /* turn 3rd slide */
 
 #slider-image-3:target~.image-holder3 {
-    margin-top: 0;
+    /* margin-top: 0; */
     right: 0;
+    transition: right 0.6s;
 }
 
 /* 2nd slider going left */
 
 #slider-image-3:target~.image-holder2 {
-    right: 0;
-    left: -1920px;
-    transition: left 0.6s;
+    right: 1920px;
+    transition: right 0.6s;
+    /* top: -39vh; */
+}
+
+/* go away 3rd slide */
+
+/* bug 1st slide fix */
+
+#slider-image-3:target~.image-holder {
+    right: calc(1920px * 2);
+    transition: right 0.6s;
+}
+
+#slider-image-3:target~.image-holder4 {
+    right: calc(-1920px);
+    transition: right 0.6s;
+}
+
+/*----------------------------------------------------*/
+/*button 4*/
+
+/* 1st slide going left 2nd slide going mid */
+
+#slider-image-4:target~.image-holder {
+    right: calc(1920px * 3);
+    transition: right 0.6s;
+}
+#slider-image-4:target~.image-holder2 {
+    right: calc(1920px * 2);
+    transition: right 0.6s;
 }
 
 /* turn 4th slider  */
+
 #slider-image-4:target~.image-holder4 {
     right: 0;
     margin: 0;
-}
-#slider-image-4:target~.image-holder3 {
-    left: -1920px;
-    transition: left 0.6s;
+    transition: right 0.6s;
 }
 
+#slider-image-4:target~.image-holder3 {
+    right: 1920px;
+    transition: right 0.6s;
+}
+/*----------------------------------------------------*/
 .button-holder {
     height: 5%;
     display: flex;
@@ -121,23 +166,26 @@
     border-radius: 5px;
     background-color: rgb(93, 93, 232);
 }
-.slider-buttons:hover{
+
+.slider-buttons:hover {
     cursor: pointer;
     background-color: white;
     border: rgb(93, 93, 232);
     border-radius: 50%;
 }
-.slider-buttons:active{
-    background-color: grey;
 
-}
-.slider-buttons:checked{
+.slider-buttons:active {
     background-color: grey;
+}
 
+.slider-buttons:checked {
+    background-color: grey;
 }
-a:checked{
-background-color: grey;
+
+a:checked {
+    background-color: grey;
 }
-a:active{
+
+a:active {
     background-color: grey;
 }
