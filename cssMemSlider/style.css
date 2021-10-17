@@ -18,7 +18,7 @@ span {
 }
 
 .image-holder {
-    top: 125vh;
+    top: 120vh;
     position: relative;
     /* transition: left 0.6s; */
     border-radius: 10%;
@@ -33,14 +33,14 @@ span {
 
 .image-holder3 {
     padding-bottom: 2%;
-    top: -30vh;
+    top: -33vh;
     position: relative;
     right: -120em;
     /* transition: right 0.6s; */
 }
 
 .image-holder4 {
-    top: -113vh;
+    top: -116vh;
     position: relative;
     right: -120em;
     /* transition: right 0.6s; */
@@ -172,8 +172,8 @@ span {
     display: flex;
     justify-content: space-between;
     width: 5%;
-    margin-left: 78%;
-    margin-top: -3%;
+    margin-left: 77.5%;
+    margin-top: -6.6%;
 }
 
 .slider-buttons {
@@ -203,7 +203,9 @@ span {
     opacity: 0%;
     /* background-color: aqua; */
 }
-
+.text-position {
+   padding-top: 1%;
+}
 /* adaptive  */
 
 @media screen and (max-width: 320px) {
