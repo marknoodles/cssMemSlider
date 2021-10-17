@@ -1,0 +1,251 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+    color: white;
+}
+
+.slider-holder {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(67, 67, 67);
+    padding-bottom: 4%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.image-holder {
+    top: 120vh;
+    position: relative;
+    /* transition: left 0.6s; */
+    border-radius: 10%;
+}
+
+.image-holder2 {
+    top: 39vh;
+    right: -120em;
+    position: relative;
+    margin-bottom: -4%;
+}
+
+.image-holder3 {
+    padding-bottom: 2%;
+    top: -33vh;
+    position: relative;
+    right: -120em;
+    /* transition: right 0.6s; */
+}
+
+.image-holder4 {
+    top: -116vh;
+    position: relative;
+    right: -120em;
+    /* transition: right 0.6s; */
+}
+
+.slider-image {
+    border-radius: 1%;
+}
+
+
+
+/*button 1*/
+
+/* turn 1st slide */
+
+#slider-image-1:target~.image-holder {
+    right: 0px;
+    transition: right 0.6s;
+}
+
+#slider-image-1:target~.image-holder2 {
+    transition: right 0.6s;
+    right: -120em;
+}
+
+#slider-image-1:target~.image-holder3 {
+    right: calc(-120em * 2);
+    transition: right 0.6s;
+}
+
+#slider-image-1:target~.image-holder4 {
+    right: calc(-120em * 3);
+    transition: right 0.6s;
+}
+
+/*----------------------------------------------------*/
+
+/*button 2*/
+
+#slider-image-2:target~.image-holder {
+    right: 120em;
+    transition: right 0.6s;
+}
+
+/* turn 2nd slide */
+
+#slider-image-2:target~.image-holder2 {
+    right: 0px;
+    transition: right 0.6s;
+}
+
+#slider-image-2:target~.image-holder3 {
+    right: calc(-120em);
+    transition: right 0.6s;
+}
+
+#slider-image-2:target~.image-holder4 {
+    right: calc(-120em * 2);
+    transition: right 0.6s;
+}
+
+/*----------------------------------------------------*/
+
+/*button 3*/
+
+/* turn 3rd slide */
+
+#slider-image-3:target~.image-holder3 {
+    /* margin-top: 0; */
+    right: 0;
+    transition: right 0.6s;
+}
+
+/* 2nd slider going left */
+
+#slider-image-3:target~.image-holder2 {
+    right: 120em;
+    transition: right 0.6s;
+    /* top: -39vh; */
+}
+
+/* go away 3rd slide */
+
+/* bug 1st slide fix */
+
+#slider-image-3:target~.image-holder {
+    right: calc(120em * 2);
+    transition: right 0.6s;
+}
+
+#slider-image-3:target~.image-holder4 {
+    right: calc(-120em);
+    transition: right 0.6s;
+}
+
+/*----------------------------------------------------*/
+
+/*button 4*/
+
+/* 1st slide going left 2nd slide going mid */
+
+#slider-image-4:target~.image-holder {
+    right: calc(120em * 3);
+    transition: right 0.6s;
+}
+
+#slider-image-4:target~.image-holder2 {
+    right: calc(120em * 2);
+    transition: right 0.6s;
+}
+
+/* turn 4th slider  */
+
+#slider-image-4:target~.image-holder4 {
+    right: 0;
+    margin: 0;
+    transition: right 0.6s;
+}
+
+#slider-image-4:target~.image-holder3 {
+    right: 120em;
+    transition: right 0.6s;
+}
+
+/*----------------------------------------------------*/
+
+.button-holder {
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 5%;
+    margin-left: 77.5%;
+    margin-top: -6.6%;
+}
+
+.slider-buttons {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    border-radius: 5px;
+    background-color: rgb(93, 93, 232);
+}
+
+.slider-buttons:hover {
+    cursor: pointer;
+    background-color: white;
+    border: rgb(93, 93, 232);
+    border-radius: 50%;
+}
+
+.a-block {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -46%;
+    margin-top: -44%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    opacity: 0%;
+    /* background-color: aqua; */
+}
+.text-position {
+   padding-top: 1%;
+}
+/* adaptive  */
+
+@media screen and (max-width: 320px) {
+    .slider-holder {
+        padding-bottom: 13%;
+    }
+    .image-holder {
+        top: 58vh;
+        position: relative;
+        border-radius: 10%;
+    }
+    .image-holder2 {
+        top: 15vh;
+        right: -120em;
+        position: relative;
+    }
+    .image-holder3 {
+        top: -19vh;
+        position: relative;
+        right: -120em;
+    }
+    .image-holder4 {
+        top: -52vh;
+        position: relative;
+        right: -120em;
+    }
+    .slider-image {}
+    img {
+        width: 97%;
+        margin-left: 0.8vh;
+    }
+    .button-holder {
+        width: 34%;
+        margin-left: 33%;
+        margin-top: -44%;
+    }
+    span {
+        font-size: 12px;
+    }
+    .text-position {
+        margin-left: 2%;
+    }
+}
