@@ -1,7 +1,15 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+    color: white;
+}
+
 .slider-holder {
     display: flex;
     justify-content: center;
-    background-color: grey;
+    background-color: rgb(67, 67, 67);
     padding-bottom: 4%;
     flex-direction: column;
     align-items: center;
@@ -10,8 +18,7 @@
 }
 
 .image-holder {
-    top: 119vh;
-    clear: both;
+    top: 125vh;
     position: relative;
     /* transition: left 0.6s; */
     border-radius: 10%;
@@ -19,7 +26,7 @@
 
 .image-holder2 {
     top: 39vh;
-    right: -1920px;
+    right: -120em;
     position: relative;
     margin-bottom: -4%;
 }
@@ -28,20 +35,22 @@
     padding-bottom: 2%;
     top: -30vh;
     position: relative;
-    right: -1920px;
+    right: -120em;
     /* transition: right 0.6s; */
 }
 
 .image-holder4 {
     top: -113vh;
     position: relative;
-    right: -1920px;
+    right: -120em;
     /* transition: right 0.6s; */
 }
 
 .slider-image {
     border-radius: 1%;
 }
+
+
 
 /*button 1*/
 
@@ -54,23 +63,25 @@
 
 #slider-image-1:target~.image-holder2 {
     transition: right 0.6s;
-    right: -1920px;
+    right: -120em;
 }
 
 #slider-image-1:target~.image-holder3 {
-    right: calc(-1920px * 2);
+    right: calc(-120em * 2);
     transition: right 0.6s;
 }
 
 #slider-image-1:target~.image-holder4 {
-    right: calc(-1920px * 3);
+    right: calc(-120em * 3);
     transition: right 0.6s;
 }
+
 /*----------------------------------------------------*/
+
 /*button 2*/
 
 #slider-image-2:target~.image-holder {
-    right: 1920px;
+    right: 120em;
     transition: right 0.6s;
 }
 
@@ -82,15 +93,17 @@
 }
 
 #slider-image-2:target~.image-holder3 {
-    right: calc(-1920px);
+    right: calc(-120em);
     transition: right 0.6s;
 }
 
 #slider-image-2:target~.image-holder4 {
-    right: calc(-1920px * 2);
+    right: calc(-120em * 2);
     transition: right 0.6s;
 }
+
 /*----------------------------------------------------*/
+
 /*button 3*/
 
 /* turn 3rd slide */
@@ -104,7 +117,7 @@
 /* 2nd slider going left */
 
 #slider-image-3:target~.image-holder2 {
-    right: 1920px;
+    right: 120em;
     transition: right 0.6s;
     /* top: -39vh; */
 }
@@ -114,26 +127,28 @@
 /* bug 1st slide fix */
 
 #slider-image-3:target~.image-holder {
-    right: calc(1920px * 2);
+    right: calc(120em * 2);
     transition: right 0.6s;
 }
 
 #slider-image-3:target~.image-holder4 {
-    right: calc(-1920px);
+    right: calc(-120em);
     transition: right 0.6s;
 }
 
 /*----------------------------------------------------*/
+
 /*button 4*/
 
 /* 1st slide going left 2nd slide going mid */
 
 #slider-image-4:target~.image-holder {
-    right: calc(1920px * 3);
+    right: calc(120em * 3);
     transition: right 0.6s;
 }
+
 #slider-image-4:target~.image-holder2 {
-    right: calc(1920px * 2);
+    right: calc(120em * 2);
     transition: right 0.6s;
 }
 
@@ -146,10 +161,12 @@
 }
 
 #slider-image-4:target~.image-holder3 {
-    right: 1920px;
+    right: 120em;
     transition: right 0.6s;
 }
+
 /*----------------------------------------------------*/
+
 .button-holder {
     height: 5%;
     display: flex;
@@ -174,18 +191,59 @@
     border-radius: 50%;
 }
 
-.slider-buttons:active {
-    background-color: grey;
+.a-block {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -46%;
+    margin-top: -44%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    opacity: 0%;
+    /* background-color: aqua; */
 }
 
-.slider-buttons:checked {
-    background-color: grey;
-}
+/* adaptive  */
 
-a:checked {
-    background-color: grey;
-}
-
-a:active {
-    background-color: grey;
+@media screen and (max-width: 320px) {
+    .slider-holder {
+        padding-bottom: 13%;
+    }
+    .image-holder {
+        top: 58vh;
+        position: relative;
+        border-radius: 10%;
+    }
+    .image-holder2 {
+        top: 15vh;
+        right: -120em;
+        position: relative;
+    }
+    .image-holder3 {
+        top: -19vh;
+        position: relative;
+        right: -120em;
+    }
+    .image-holder4 {
+        top: -52vh;
+        position: relative;
+        right: -120em;
+    }
+    .slider-image {}
+    img {
+        width: 97%;
+        margin-left: 0.8vh;
+    }
+    .button-holder {
+        width: 34%;
+        margin-left: 33%;
+        margin-top: -44%;
+    }
+    span {
+        font-size: 12px;
+    }
+    .text-position {
+        margin-left: 2%;
+    }
 }
